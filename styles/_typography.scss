@@ -1,0 +1,56 @@
+@mixin text-preset-1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 96px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 100%;
+    letter-spacing: -2px;
+}
+
+@mixin text-preset-2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@mixin text-preset-3 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+@mixin text-preset-4 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@mixin text-preset-5 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+@mixin text-preset-6 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+@mixin text-preset-7 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+@mixin text-preset-8 {
+    font-family: 'DM sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+}

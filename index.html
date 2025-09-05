@@ -14,49 +14,120 @@
   <title>Frontend Mentor | Weather app</title>
 </head>
 <body>
+  <div class="weather-app">
+    <header class="app-header">
+      <img src="/assets/images/logo.svg" alt="Weather App Logo" class="app-logo">
+      <div class="units-control">
+        <button class="units-toggle-btn" aria-expanded="false" aria-controls="units-dropdown">
+          <img src="/assets/images/icon-units.svg" alt="Unit Icon" class="units-icon" aria-hidden="true">
+          <span>Units</span>
+          <img src="/assets/images/icon-dropdown.svg" alt="Dropdown Icon" class="dropdown-icon" aria-hidden="true">
+        </button>
+        <nav class="units-dropdown" id="units-dropdown" role="menu" aria-hidden="true">
+          <button class="units-option" role="menuitem">Switch to Metric</button>
+          <section class="units-section">
+            <h3 class="units-category">Temperature</h3>
+            <button class="units-option" role="menuitem">Celsius °C</button>
+            <button class="units-option" role="menuitem">Fahrenheit °F</button>
+          </section>
+          <section class="units-section">
+            <h3 class="units-category">Wind Speed</h3>
+            <button class="units-option" role="menuitem">km/h</button>
+            <button class="units-option" role="menuitem">mph</button>
+          </section>
+          <section class="units-section">
+            <h3 class="units-category">Precipitation</h3>
+            <button class="units-option" role="menuitem">Millimeters (mm)</button>
+            <button class="units-option" role="menuitem">Inches (in)</button>
+          </section>
+        </nav>
+      </div>
+    </header>
 
-  Units
+    <main class="main-content">
+      <h1 class="page-title">How's the sky looking today?</h1>
 
-  Switch to Imperial/Metric
+      <section class="location-search">
+          <img src="assets/images/icon-search.svg" alt="" class="search-icon" aria-hidden="true">
+          <input type="search" class="location-input" placeholder="Search for a place..." id="locationSearch" aria-label="Search for a location">
+        <button class="search-submit-btn" id="searchButton">Search</button>
+      </section>
 
-  Temperature
+      <div class="weather-dashboard">
+        <aside class="primary-weather-panel">
+          <section class="current-weather-card">
+            <header class="current-weather-header">
+              <div class="location-details">
+                <h2 class="current-location" id="currentLocation">Berlin, Germany</h2>
+                <time class="current-date" id="currentDate" datetime="2025-08-05">Tuesday, Aug 5, 2025</time>
+              </div>
+              <div class="current-temperature-display">
+                <img src="assets/images/icon-sunny.webp" alt="Sunny weather" class="current-weather-icon" id="currentWeatherIcon">
+                <span class="current-temperature" id="currentTemperature">20°</span>
+              </div>
+            </header>
+            
+            <dl class="weather-metrics">
+              <div class="weather-metric">
+                <dt class="metric-label">Feels like</dt>
+                <dd class="metric-value" id="feelsLikeTemp">18°</dd>
+              </div>
+              <div class="weather-metric">
+                <dt class="metric-label">Humidity</dt>
+                <dd class="metric-value" id="humidityLevel">46%</dd>
+              </div>
+              <div class="weather-metric">
+                <dt class="metric-label">Wind</dt>
+                <dd class="metric-value" id="windSpeed">14 km/h</dd>
+              </div>
+              <div class="weather-metric">
+                <dt class="metric-label">Precipitation</dt>
+                <dd class="metric-value" id="precipitationAmount">0 mm</dd>
+              </div>
+            </dl>
+          </section>
 
-  Celsius (°C)
-  Fahrenheit (°F)
+          <section class="daily-forecast-section">
+            <h3 class="sr-only">5-Day Weather Forecast</h3>
+            <div class="daily-forecast-item">
+              <span class="forecast-day-label">Wed</span>
+              <img src="assets/images/icon-sunny.webp" alt="Sunny" class="daily-forecast-icon">
+              <span class="daily-forecast-temp">21°</span>
+            </div>
+            <div class="daily-forecast-item">
+              <span class="forecast-day-label">Thu</span>
+              <img src="assets/images/icon-cloudy.webp" alt="Cloudy" class="daily-forecast-icon">
+              <span class="daily-forecast-temp">19°</span>
+            </div>
+            <div class="daily-forecast-item">
+              <span class="forecast-day-label">Fri</span>
+              <img src="assets/images/icon-rainy.webp" alt="Rainy" class="daily-forecast-icon">
+              <span class="daily-forecast-temp">17°</span>
+            </div>
+            <div class="daily-forecast-item">
+              <span class="forecast-day-label">Sat</span>
+              <img src="assets/images/icon-thunderstorm.webp" alt="Thunderstorm" class="daily-forecast-icon">
+              <span class="daily-forecast-temp">16°</span>
+            </div>
+            <div class="daily-forecast-item">
+              <span class="forecast-day-label">Sun</span>
+              <img src="assets/images/icon-sunny.webp" alt="Sunny" class="daily-forecast-icon">
+              <span class="daily-forecast-temp">22°</span>
+            </div>
+          </section>
+        </aside>
 
-  Wind Speed
-
-  km/h
-  mph
-
-  Precipitation
-
-  Millimeters (mm)
-  Inches (in)
-
-  How's the sky looking today?
-
-  Search for a city, e.g., New York
-  Search
-
-  Feels like
-  <!-- Insert temperature here -->
-
-  Humidity
-  <!-- Insert humidity here -->
-
-  Wind
-  <!-- Insert wind here -->   
-  
-  Precipitation
-  <!-- Insert precipitation here -->
-
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
-
-  Hourly forecast
-  <!-- Insert hourly forecast for the selected day here -->
-
+        <section class="hourly-forecast-panel">
+          <h3 class="hourly-forecast-title">Hourly forecast</h3>
+          <div class="hourly-forecast-item">
+            <img src="assets/images/icon-sunny.webp" alt="Sunny" class="hourly-weather-icon">
+            <time class="hourly-time-label">3 PM</time>
+            <span class="hourly-temperature">20°</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

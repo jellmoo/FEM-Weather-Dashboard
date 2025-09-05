@@ -48,8 +48,10 @@
       <h1 class="page-title">How's the sky looking today?</h1>
 
       <section class="location-search">
-          <img src="assets/images/icon-search.svg" alt="" class="search-icon" aria-hidden="true">
+        <div class="search-input-wrapper">
+          <img src="assets/images/icon-search.svg" alt="Search Icon" class="search-icon" aria-hidden="true">
           <input type="search" class="location-input" placeholder="Search for a place..." id="locationSearch" aria-label="Search for a location">
+        </div>
         <button class="search-submit-btn" id="searchButton">Search</button>
       </section>
 
@@ -88,31 +90,57 @@
           </section>
 
           <section class="daily-forecast-section">
-            <h3 class="sr-only">5-Day Weather Forecast</h3>
-            <div class="daily-forecast-item">
-              <span class="forecast-day-label">Wed</span>
-              <img src="assets/images/icon-sunny.webp" alt="Sunny" class="daily-forecast-icon">
-              <span class="daily-forecast-temp">21°</span>
-            </div>
-            <div class="daily-forecast-item">
-              <span class="forecast-day-label">Thu</span>
-              <img src="assets/images/icon-cloudy.webp" alt="Cloudy" class="daily-forecast-icon">
-              <span class="daily-forecast-temp">19°</span>
-            </div>
-            <div class="daily-forecast-item">
-              <span class="forecast-day-label">Fri</span>
-              <img src="assets/images/icon-rainy.webp" alt="Rainy" class="daily-forecast-icon">
-              <span class="daily-forecast-temp">17°</span>
-            </div>
-            <div class="daily-forecast-item">
-              <span class="forecast-day-label">Sat</span>
-              <img src="assets/images/icon-thunderstorm.webp" alt="Thunderstorm" class="daily-forecast-icon">
-              <span class="daily-forecast-temp">16°</span>
-            </div>
-            <div class="daily-forecast-item">
-              <span class="forecast-day-label">Sun</span>
-              <img src="assets/images/icon-sunny.webp" alt="Sunny" class="daily-forecast-icon">
-              <span class="daily-forecast-temp">22°</span>
+            <h3 class="sr-only">Daily forecast</h3>
+            <div class="daily-forecast-content">
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Wed</span>
+                <img src="/assets/images/icon-sunny.webp" alt="Sunny" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">21°</span><span class="daily-forecast-temp low">14°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Thu</span>
+                <img src="/assets/images/icon-overcast.webp" alt="Cloudy" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">19°</span><span class="daily-forecast-temp low">15°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Fri</span>
+                <img src="/assets/images/icon-rain.webp" alt="Rainy" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">17°</span><span class="daily-forecast-temp low">14°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Sat</span>
+                <img src="/assets/images/icon-storm.webp" alt="Thunderstorm" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">16°</span><span class="daily-forecast-temp low">13°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Sun</span>
+                <img src="/assets/images/icon-snow.webp" alt="Snowy" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">22°</span><span class="daily-forecast-temp low">15°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Mon</span>
+                <img src="/assets/images/icon-fog.webp" alt="Foggy" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">22°</span><span class="daily-forecast-temp low">16°</span>
+                </div>
+              </div>
+              <div class="daily-forecast-item">
+                <span class="forecast-day-label">Tue</span>
+                <img src="/assets/images/icon-overcast.webp" alt="Overcast" class="daily-forecast-icon">
+                <div class="daily-forecast-temps">
+                  <span class="daily-forecast-temp">22°</span><span class="daily-forecast-temp low">15°</span>
+                </div>
+              </div>
             </div>
           </section>
         </aside>
@@ -123,6 +151,7 @@
             <img src="assets/images/icon-sunny.webp" alt="Sunny" class="hourly-weather-icon">
             <time class="hourly-time-label">3 PM</time>
             <span class="hourly-temperature">20°</span>
+          </div>
           </div>
         </section>
       </div>

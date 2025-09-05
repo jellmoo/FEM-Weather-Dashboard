@@ -2,3 +2,207 @@
 @use 'typography' as *;
 @use 'reset' as *;
 
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'DM sans', sans-serif;
+    background-color: $neutral-900;
+    color: $white;
+    margin: $spacing-600 $spacing-1400;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.units-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    border-radius: $radius-8;
+    width: 120px;
+    height: 45px;
+    @include text-preset-7;
+}
+
+ .units-dropdown {
+    display: none;
+ }
+
+.units-icon,
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.page-title {
+    @include text-preset-2;
+    text-align: center;
+    padding-top: $spacing-800;
+    padding-bottom: $spacing-800;
+}
+
+.location-search {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-200;
+    margin-bottom: $spacing-600;
+}
+
+.location-input {
+    @include text-preset-5-med;
+    color: $neutral-200;
+    background-color: transparent;
+    border: none;
+    width: 500px;
+}
+
+.location-input::placeholder {
+    @include text-preset-5-med;
+    color: $neutral-200;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: $spacing-200;
+    background-color: $primary;
+    border-radius: $radius-12;
+    padding: $spacing-200;
+}
+
+.search-submit-btn {
+    width: 115px;
+    padding: $spacing-200 $spacing-300;
+    background-color: $blue-500;
+    border: none;
+    @include text-preset-5-med;
+    color: $white;
+    border-radius: $radius-12;
+}
+
+.search-icon {
+    width: 25px;
+    height: 20px;
+}
+
+.primary-weather-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-weather-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-600;
+}
+
+.current-weather-header {
+    display: flex;
+    padding: $spacing-1000 $spacing-300;
+    align-items: center;
+    background-image: url('/assets/images/bg-today-large.svg');
+    max-width: 800px;
+    height: 286px;
+    margin-bottom: $spacing-400;
+    border-radius: $radius-20;
+}
+
+.current-location {
+    @include text-preset-4;
+}
+
+.current-date {
+    @include text-preset-6;
+    opacity: 80%;
+}
+
+.current-temperature-display {
+    display: flex;
+    gap: $spacing-250;
+}
+
+.current-temperature {
+    @include text-preset-1;
+}
+
+.weather-metrics {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-300;
+}
+
+.weather-metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 180px;
+    height: 118px;
+    background-color: $primary;
+    padding: $spacing-250;
+    border-radius: $radius-12;
+}
+
+.metric-label {
+    @include text-preset-6;
+    color: $neutral-200;
+    margin-bottom: $spacing-250;
+}
+
+.metric-value {
+    @include text-preset-3;
+}
+
+.current-weather-icon {
+    width: 100px;
+    height: 100px;
+ }
+
+ .daily-forecast-section {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-250;
+ }
+
+ .daily-forecast-content {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-200;
+ }
+
+ .daily-forecast-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+    height: 100%;
+    background-color: $primary;
+    border-radius: $radius-12;
+    padding: $spacing-125 $spacing-200;
+    gap: $spacing-200;
+ }
+ 
+ .daily-forecast-icon {
+    width: 60px;
+    height: 60px;
+ }
+
+ .daily-forecast-temps {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .hourly-weather-icon {
+    width: 40px;
+    height: 40px;
+ }

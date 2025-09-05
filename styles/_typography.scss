@@ -34,6 +34,13 @@
     line-height: 120%;
 }
 
+@mixin text-preset-5-med {
+    font-family: 'DM sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
 @mixin text-preset-6 {
     font-family: 'DM sans', sans-serif;
     font-size: 18px;

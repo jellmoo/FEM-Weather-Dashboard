@@ -39,4 +39,248 @@ h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "DM sans", sans-serif;
+  background-color: rgb(2, 1, 44);
+  color: rgb(255, 255, 255);
+  margin: 48px 112px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.units-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(38, 37, 64);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  width: 120px;
+  height: 45px;
+  font-family: "DM sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.units-dropdown {
+  display: none;
+}
+
+.units-icon,
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.page-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.location-search {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.location-input {
+  font-family: "DM sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgb(212, 211, 217);
+  background-color: transparent;
+  border: none;
+  width: 500px;
+}
+
+.location-input::-moz-placeholder {
+  font-family: "DM sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgb(212, 211, 217);
+}
+
+.location-input::placeholder {
+  font-family: "DM sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgb(212, 211, 217);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: rgb(38, 37, 64);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.search-submit-btn {
+  width: 115px;
+  padding: 16px 24px;
+  background-color: rgb(70, 88, 217);
+  border: none;
+  font-family: "DM sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.search-icon {
+  width: 25px;
+  height: 20px;
+}
+
+.primary-weather-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.current-weather-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.current-weather-header {
+  display: flex;
+  padding: 80px 24px;
+  align-items: center;
+  background-image: url("/assets/images/bg-today-large.svg");
+  max-width: 800px;
+  height: 286px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+}
+
+.current-location {
+  font-family: "DM sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.current-date {
+  font-family: "DM sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  opacity: 80%;
+}
+
+.current-temperature-display {
+  display: flex;
+  gap: 20px;
+}
+
+.current-temperature {
+  font-family: "DM Sans", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: -2px;
+}
+
+.weather-metrics {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.weather-metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 180px;
+  height: 118px;
+  background-color: rgb(38, 37, 64);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.metric-label {
+  font-family: "DM sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgb(212, 211, 217);
+  margin-bottom: 20px;
+}
+
+.metric-value {
+  font-family: "DM sans", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.current-weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.daily-forecast-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.daily-forecast-content {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.daily-forecast-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100px;
+  height: 100%;
+  background-color: rgb(38, 37, 64);
+  border-radius: 12px;
+  padding: 10px 16px;
+  gap: 16px;
+}
+
+.daily-forecast-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.daily-forecast-temps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hourly-weather-icon {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=styles.css.map */

@@ -6,14 +6,31 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'DM sans', sans-serif;
-    background-color: $neutral-900;
-    color: $white;
-    margin: $spacing-600 $spacing-1400;
+    background-color: $color-bg-secondary;
+    color: $color-text-primary;
+    margin: 0;
+    padding: $spacing-600 $spacing-400;
+    height: 100vh;
+
+    @include tablet {
+        padding-bottom: $spacing-1000;
+    }
+
+    @include mobile {
+        padding: $spacing-200 $spacing-200 $spacing-600 $spacing-200;
+    }
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+}
+
+.app-logo {
+    @include mobile {
+        width: 137px;
+    }
 }
 
 main {
@@ -22,17 +39,32 @@ main {
     align-items: center;
 }
 
+.units-title {
+     margin: 0 $spacing-125;
+
+     @include mobile {
+        margin: 0 $spacing-050;
+
+    }
+}
+
 .units-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: $primary;
-    color: $white;
+    background-color: $color-bg-primary;
+    color: $color-text-primary;
     border: none;
     border-radius: $radius-8;
-    width: 120px;
+    max-width: 120px;
     height: 45px;
     @include text-preset-7;
+    padding: $spacing-200 $spacing-150;
+
+    @include mobile {
+        max-width: 90px;
+        @include text-preset-8;
+    }
 }
 
  .units-dropdown {
@@ -43,6 +75,11 @@ main {
 .dropdown-icon {
     width: 16px;
     height: 16px;
+
+    @include mobile {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .page-title {
@@ -50,50 +87,79 @@ main {
     text-align: center;
     padding-top: $spacing-800;
     padding-bottom: $spacing-800;
+
+    @include mobile {
+        padding-top: $spacing-600;
+        padding-bottom: $spacing-600;
+    }
 }
 
 .location-search {
     display: flex;
     justify-content: center;
+    width: 100%;
     gap: $spacing-200;
     margin-bottom: $spacing-600;
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
 }
 
 .location-input {
     @include text-preset-5-med;
-    color: $neutral-200;
+    color: $color-text-secondary;
     background-color: transparent;
     border: none;
-    width: 500px;
 }
 
 .location-input::placeholder {
     @include text-preset-5-med;
-    color: $neutral-200;
+    color: $color-text-secondary;
 }
 
 .search-input-wrapper {
     display: flex;
     align-items: center;
     gap: $spacing-200;
-    background-color: $primary;
+    max-width: 590px;
+    min-width: auto;
+    width: 100%;
+    background-color: $color-bg-primary;
     border-radius: $radius-12;
     padding: $spacing-200;
 }
 
 .search-submit-btn {
-    width: 115px;
+    max-width: 115px;
     padding: $spacing-200 $spacing-300;
-    background-color: $blue-500;
+    background-color: $color-bg-accent;
     border: none;
     @include text-preset-5-med;
-    color: $white;
+    color: $color-text-muted;
     border-radius: $radius-12;
+
+    @include mobile {
+        max-width: 350px;
+        width: 100%;
+    }
 }
 
 .search-icon {
     width: 25px;
     height: 20px;
+}
+
+.weather-dashboard {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-400;
+    margin-bottom: $spacing-1000;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .primary-weather-panel {
@@ -105,26 +171,48 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: $spacing-600;
+
+    @include tablet {
+        margin-bottom: $spacing-400;
+    }
 }
 
 .current-weather-header {
     display: flex;
     padding: $spacing-1000 $spacing-300;
     align-items: center;
-    background-image: url('/assets/images/bg-today-large.svg');
+    background-image: url('/assets/images/dark-bg.jpg');
+    background-size: cover;
     max-width: 800px;
     height: 286px;
     margin-bottom: $spacing-400;
     border-radius: $radius-20;
+    color: $color-text-muted;
+
+    @include tablet {
+        margin-bottom: $spacing-250;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+        padding: $spacing-600 $spacing-300;
+        // background-image: url('/assets/images/bg-today-small.svg');
+    }
 }
 
 .current-location {
     @include text-preset-4;
+    margin-bottom: $spacing-150;
 }
 
 .current-date {
     @include text-preset-6;
     opacity: 80%;
+
+    @include mobile {
+        margin-bottom: $spacing-200;
+    }
 }
 
 .current-temperature-display {
@@ -137,25 +225,38 @@ main {
 }
 
 .weather-metrics {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: $spacing-300;
+
+    @include mobile { // fix
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: $spacing-200;
+    }
 }
 
 .weather-metric {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
     height: 118px;
-    background-color: $primary;
+    background-color: $color-bg-primary;
     padding: $spacing-250;
     border-radius: $radius-12;
+    border: solid 1px $color-border-light;
+
+    @include mobile {
+        max-width: 163px;
+    }
 }
 
 .metric-label {
     @include text-preset-6;
-    color: $neutral-200;
+    color: $color-text-secondary;
     margin-bottom: $spacing-250;
 }
 
@@ -175,9 +276,15 @@ main {
  }
 
  .daily-forecast-content {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: $spacing-200;
+
+    @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr)
+    }
  }
 
  .daily-forecast-item {
@@ -186,10 +293,19 @@ main {
     text-align: center;
     width: 100px;
     height: 100%;
-    background-color: $primary;
+    background-color: $color-bg-primary;
     border-radius: $radius-12;
     padding: $spacing-125 $spacing-200;
     gap: $spacing-200;
+    border: solid 1px $color-border-light;
+
+    @include tablet {
+        width: 89px;
+    }
+
+    @include mobile {
+        width: 103px;
+    }
  }
  
  .daily-forecast-icon {
@@ -202,7 +318,64 @@ main {
     justify-content: space-between;
  }
 
+ .hourly-forecast-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-primary;
+    width: 100%;
+    max-width: 720px;
+    min-width: 384px;
+    border-radius: $radius-20;
+    padding: $spacing-300;
+
+    @include tablet {
+        margin-bottom: $spacing-1000;
+    }
+
+    @include mobile {
+        min-width: 345px;
+    }
+ }
+
+ .hourly-forecast-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: $spacing-200;
+ }
+
+ .hourly-forecast-title {
+    @include text-preset-5;
+    margin-bottom: $spacing-200;
+ }
+
+ .hourly-forecast-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $spacing-100;
+    background-color: $color-border-light;
+    padding: $spacing-125 $spacing-200 $spacing-125 $spacing-150;
+    border: solid 1px $color-border-light;
+ }
+
+ .hourly-forecast-details {
+    display: flex;
+    align-items: center;
+    gap: $spacing-100;
+ }
+
  .hourly-weather-icon {
     width: 40px;
     height: 40px;
+ }
+
+ .hourly-time-label {
+    @include text-preset-5-med;
+    
+ }
+
+ .hourly-temperature {
+    @include text-preset-7;
  }

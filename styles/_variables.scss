@@ -1,14 +1,32 @@
-// Color Variables
-$neutral-900: rgba(2, 1, 44);
-$neutral-700: rgba(48, 47, 74);
-$neutral-600: rgba(60, 59, 94);
-$neutral-300: rgba(172, 172, 183);
-$neutral-200: rgba(212, 211, 217);
+// Light Mode colors
+// $dark-purple: rgba(39, 25, 47);
+// $muted-purple: rgba(144, 97, 129);
+// $lilac: rgba(144, 97, 129);
+// $pink: rgba(144, 97, 129);
+// $coral: rgba(144, 97, 129);
 $white: rgba(255, 255, 255);
-$primary: rgba(38, 37, 64);
-$orange: rgba(255, 130, 10);
-$blue-700: rgba(43, 27, 156);
-$blue-500: rgba(70, 88, 217);
+
+// Dark Mode colors
+$dark-blue: rgba(5, 25, 62, 255);
+$mid-blue: rgb(18, 40, 77);
+$med-blue: rgb(29, 49, 85);
+$light-blue: rgba(53, 105 ,165 ,255);
+$yellow: rgba(255, 200, 135, 255);
+$orange: rgba(53, 105, 165, 255);
+$neutral-200: rgba(212, 211, 217);
+
+// Backgrounds
+$color-bg-primary: $mid-blue;
+$color-bg-secondary: $dark-blue;
+$color-bg-accent: $yellow;
+
+// Text
+$color-text-primary: $white;
+$color-text-secondary: $neutral-200;
+$color-text-muted: $dark-blue;
+
+// Borders
+$color-border-light: $med-blue;
 
 // Spacing Variables
 $spacing-0: 0;
@@ -42,3 +60,16 @@ $radius-16: 16px;
 $radius-20: 20px;
 $radius-24: 24px;
 $radius-full: 999px;
+
+// Media Query Breakpoints
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    } 
+}

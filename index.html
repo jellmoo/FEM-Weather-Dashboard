@@ -20,7 +20,7 @@
       <div class="units-control">
         <button class="units-toggle-btn" aria-expanded="false" aria-controls="units-dropdown">
           <img src="/assets/images/icon-units.svg" alt="Unit Icon" class="units-icon" aria-hidden="true">
-          <span>Units</span>
+          <span class="units-title">Units</span>
           <img src="/assets/images/icon-dropdown.svg" alt="Dropdown Icon" class="dropdown-icon" aria-hidden="true">
         </button>
         <nav class="units-dropdown" id="units-dropdown" role="menu" aria-hidden="true">
@@ -147,11 +147,14 @@
 
         <section class="hourly-forecast-panel">
           <h3 class="hourly-forecast-title">Hourly forecast</h3>
-          <div class="hourly-forecast-item">
-            <img src="assets/images/icon-sunny.webp" alt="Sunny" class="hourly-weather-icon">
-            <time class="hourly-time-label">3 PM</time>
-            <span class="hourly-temperature">20°</span>
-          </div>
+          <div class="hourly-forecast-content">
+            <div class="hourly-forecast-item">
+              <div class="hourly-forecast-details">
+                <img src="assets/images/icon-sunny.webp" alt="Sunny" class="hourly-weather-icon">
+                <time class="hourly-time-label">3 PM</time>
+              </div>
+              <span class="hourly-temperature">20°</span>
+            </div>
           </div>
         </section>
       </div>

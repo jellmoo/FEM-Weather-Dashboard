@@ -18,7 +18,7 @@
     <header class="app-header">
       <img src="/assets/images/logo.svg" alt="Weather App Logo" class="app-logo">
       <div class="units-control">
-        <button class="units-toggle-btn" aria-expanded="false" aria-controls="units-dropdown">
+        <button class="units-toggle-btn" aria-expanded="false" aria-controls="units-dropdown" id="unitsBtn">
           <img src="/assets/images/icon-units.svg" alt="Unit Icon" class="units-icon" aria-hidden="true">
           <span class="units-title">Units</span>
           <img src="/assets/images/icon-dropdown.svg" alt="Dropdown Icon" class="dropdown-icon" aria-hidden="true">
@@ -27,17 +27,19 @@
           <button class="units-option" role="menuitem">Switch to Metric</button>
           <section class="units-section">
             <h3 class="units-category">Temperature</h3>
-            <button class="units-option" role="menuitem">Celsius °C</button>
+            <button class="units-option selected" role="menuitem">Celsius °C</button>
             <button class="units-option" role="menuitem">Fahrenheit °F</button>
           </section>
+          <hr>
           <section class="units-section">
             <h3 class="units-category">Wind Speed</h3>
-            <button class="units-option" role="menuitem">km/h</button>
+            <button class="units-option selected" role="menuitem">km/h</button>
             <button class="units-option" role="menuitem">mph</button>
           </section>
+          <hr>
           <section class="units-section">
             <h3 class="units-category">Precipitation</h3>
-            <button class="units-option" role="menuitem">Millimeters (mm)</button>
+            <button class="units-option selected" role="menuitem">Millimeters (mm)</button>
             <button class="units-option" role="menuitem">Inches (in)</button>
           </section>
         </nav>

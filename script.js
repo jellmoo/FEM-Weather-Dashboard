@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+
 const url = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m";
 
 async function getWeather() {
@@ -18,3 +21,17 @@ async function getWeather() {
     }
 }
 console.log(getWeather())
+
+let unitsBtn = document.getElementById("unitsBtn");
+let dropdownMenu = document.getElementById("units-dropdown");
+
+unitsBtn.addEventListener("click", function() {
+  // dropdownMenu.style.display = "none";
+  if (dropdownMenu.style.display == "flex") {
+    dropdownMenu.style.display = "none";
+  } else {
+    dropdownMenu.style.display = "flex";
+  }
+});
+
+});

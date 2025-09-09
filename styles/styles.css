@@ -104,6 +104,7 @@ main {
   font-weight: 500;
   line-height: 120%;
   padding: 16px 12px;
+  margin-bottom: 8px;
 }
 @media (max-width: 600px) {
   .units-toggle-btn {
@@ -115,8 +116,54 @@ main {
   }
 }
 
+.units-control {
+  position: relative;
+}
+
 .units-dropdown {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  min-width: 215px;
+  height: auto;
+  background-color: rgb(18, 40, 77);
+  border-radius: 12px;
+  padding: 8px;
   display: none;
+  flex-direction: column;
+  gap: 12px;
+  border: solid 1px rgb(42, 66, 109);
+  box-shadow: 0 8px 16px 0 rgba(2, 1, 44, 0.32);
+}
+
+.units-option {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: rgb(18, 40, 77);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "DM sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+.units-option:last-child {
+  margin-bottom: 0;
+}
+
+.units-option.selected {
+  background-color: rgb(42, 66, 109);
+}
+
+.units-category {
+  color: rgb(212, 211, 200);
+  font-family: "DM sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 6px;
 }
 
 .units-icon,
@@ -130,6 +177,10 @@ main {
     width: 14px;
     height: 14px;
   }
+}
+
+hr {
+  border: solid 1px rgb(42, 66, 109);
 }
 
 .page-title {
@@ -166,7 +217,7 @@ main {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 217);
+  color: rgb(212, 211, 200);
   background-color: transparent;
   border: none;
 }
@@ -176,7 +227,7 @@ main {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 217);
+  color: rgb(212, 211, 200);
 }
 
 .location-input::placeholder {
@@ -184,7 +235,7 @@ main {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 217);
+  color: rgb(212, 211, 200);
 }
 
 .search-input-wrapper {
@@ -336,7 +387,7 @@ main {
   background-color: rgb(18, 40, 77);
   padding: 20px;
   border-radius: 12px;
-  border: solid 1px rgb(29, 49, 85);
+  border: solid 1px rgb(42, 66, 109);
 }
 @media (max-width: 600px) {
   .weather-metric {
@@ -349,7 +400,7 @@ main {
   font-size: 18px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 217);
+  color: rgb(212, 211, 200);
   margin-bottom: 20px;
 }
 
@@ -393,7 +444,7 @@ main {
   border-radius: 12px;
   padding: 10px 16px;
   gap: 16px;
-  border: solid 1px rgb(29, 49, 85);
+  border: solid 1px rgb(42, 66, 109);
 }
 @media (max-width: 1024px) {
   .daily-forecast-item {
@@ -458,9 +509,9 @@ main {
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
-  background-color: rgb(29, 49, 85);
+  background-color: rgb(42, 66, 109);
   padding: 10px 16px 10px 12px;
-  border: solid 1px rgb(29, 49, 85);
+  border: solid 1px rgb(42, 66, 109);
 }
 
 .hourly-forecast-details {

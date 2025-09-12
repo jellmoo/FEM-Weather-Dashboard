@@ -24,6 +24,8 @@ console.log(getWeather())
 
 let unitsBtn = document.getElementById("unitsBtn");
 let dropdownMenu = document.getElementById("units-dropdown");
+let locationSearchInput = document.getElementById("locationSearch");
+let locationSearchMenu = document.getElementById("searchResults"); // add in html
 
 unitsBtn.addEventListener("click", function() {
   // dropdownMenu.style.display = "none";
@@ -35,3 +37,7 @@ unitsBtn.addEventListener("click", function() {
 });
 
 });
+
+locationSearchInput.addEventListener("keydown", function() {
+
+})

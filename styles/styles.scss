@@ -93,13 +93,21 @@ main {
     border-radius: $radius-8;
     background-color: $color-bg-primary;
     color: $white;
-    border: none;
+    border: solid 1px $color-border-light;
     @include text-preset-7;
     margin-bottom: $spacing-100;
 
     &:last-child {
         margin-bottom: 0;
     }
+ }
+
+ .units-option:hover {
+    background-color: $color-border-light;
+ }
+
+ .units-option:focus {
+    background-color: $color-border-light;
  }
 
  .units-option.selected {
@@ -156,6 +164,11 @@ hr {
     color: $color-text-secondary;
     background-color: transparent;
     border: none;
+}
+
+.location-input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .location-input::placeholder {

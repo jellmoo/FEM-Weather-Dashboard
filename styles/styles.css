@@ -142,7 +142,7 @@ main {
   border-radius: 8px;
   background-color: rgb(18, 40, 77);
   color: rgb(255, 255, 255);
-  border: none;
+  border: solid 1px rgb(42, 66, 109);
   font-family: "DM sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -151,6 +151,14 @@ main {
 }
 .units-option:last-child {
   margin-bottom: 0;
+}
+
+.units-option:hover {
+  background-color: rgb(42, 66, 109);
+}
+
+.units-option:focus {
+  background-color: rgb(42, 66, 109);
 }
 
 .units-option.selected {
@@ -220,6 +228,11 @@ hr {
   color: rgb(212, 211, 200);
   background-color: transparent;
   border: none;
+}
+
+.location-input:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .location-input::-moz-placeholder {

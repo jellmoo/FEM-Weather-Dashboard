@@ -197,7 +197,7 @@ hr {
     background-color: $color-bg-accent;
     border: none;
     @include text-preset-5-med;
-    color: $color-text-muted;
+    color: $color-text-primary;
     border-radius: $radius-12;
 
     @include mobile {
@@ -219,7 +219,7 @@ hr {
     gap: $spacing-050;
     padding: $spacing-100;
     border-radius: $radius-8;
-    height: 185px;
+    height: auto;
     z-index: 9999;
     position: absolute;
     top: 70px;
@@ -230,7 +230,6 @@ hr {
 .results-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     gap: $spacing-125;
     padding: $spacing-100 $spacing-125;
     border-radius: $radius-8;
@@ -238,6 +237,10 @@ hr {
     max-height: 40px;
     background-color: $color-border-light;
     overflow-y: hidden;
+}
+
+.result-item {
+    cursor: pointer;
 }
 
 .weather-dashboard {
@@ -277,7 +280,7 @@ hr {
     height: 286px;
     margin-bottom: $spacing-400;
     border-radius: $radius-20;
-    color: $color-text-muted;
+    color: $color-text-primary;
 
     @include tablet {
         margin-bottom: $spacing-250;

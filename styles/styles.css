@@ -45,8 +45,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "DM sans", sans-serif;
-  background-color: rgb(5, 25, 62);
-  color: rgb(255, 255, 255);
+  background-color: #15121b;
+  color: #FFF;
   margin: 0;
   padding: 48px 32px;
   height: 100vh;
@@ -93,8 +93,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(18, 40, 77);
-  color: rgb(255, 255, 255);
+  background-color: #2a2830;
+  color: #FFF;
   border: none;
   border-radius: 8px;
   max-width: 120px;
@@ -126,13 +126,13 @@ main {
   z-index: 1000;
   min-width: 215px;
   height: auto;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   border-radius: 12px;
   padding: 8px;
   display: none;
   flex-direction: column;
   gap: 12px;
-  border: solid 1px rgb(42, 66, 109);
+  border: solid 1px #413f46;
   box-shadow: 0 8px 16px 0 rgba(2, 1, 44, 0.32);
 }
 
@@ -140,9 +140,9 @@ main {
   width: 100%;
   padding: 8px 10px;
   border-radius: 8px;
-  background-color: rgb(18, 40, 77);
-  color: rgb(255, 255, 255);
-  border: solid 1px rgb(42, 66, 109);
+  background-color: #2a2830;
+  color: #FFF;
+  border: solid 1px #413f46;
   font-family: "DM sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -154,19 +154,19 @@ main {
 }
 
 .units-option:hover {
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
 }
 
 .units-option:focus {
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
 }
 
 .units-option.selected {
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
 }
 
 .units-category {
-  color: rgb(212, 211, 200);
+  color: #727177;
   font-family: "DM sans", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -188,7 +188,7 @@ main {
 }
 
 hr {
-  border: solid 1px rgb(42, 66, 109);
+  border: solid 1px #413f46;
 }
 
 .page-title {
@@ -225,7 +225,7 @@ hr {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 200);
+  color: #727177;
   background-color: transparent;
   border: none;
   width: 100%;
@@ -242,7 +242,7 @@ hr {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 200);
+  color: #727177;
 }
 
 .location-input::placeholder {
@@ -250,7 +250,7 @@ hr {
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 200);
+  color: #727177;
 }
 
 .search-input-wrapper {
@@ -260,7 +260,7 @@ hr {
   max-width: 590px;
   min-width: auto;
   width: 100%;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   border-radius: 12px;
   padding: 16px;
   position: relative;
@@ -269,13 +269,13 @@ hr {
 .search-submit-btn {
   max-width: 115px;
   padding: 16px 24px;
-  background-color: rgb(255, 200, 135);
+  background-color: #4c408b;
   border: none;
   font-family: "DM sans", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(5, 25, 62);
+  color: #FFF;
   border-radius: 12px;
 }
 @media (max-width: 600px) {
@@ -293,12 +293,12 @@ hr {
 .input-results {
   display: none;
   flex-direction: column;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   width: 100%;
   gap: 4px;
   padding: 8px;
   border-radius: 8px;
-  height: 185px;
+  height: auto;
   z-index: 9999;
   position: absolute;
   top: 70px;
@@ -309,14 +309,17 @@ hr {
 .results-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   padding: 8px 10px;
   border-radius: 8px;
   width: 100%;
   max-height: 40px;
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
   overflow-y: hidden;
+}
+
+.result-item {
+  cursor: pointer;
 }
 
 .weather-dashboard {
@@ -358,7 +361,7 @@ hr {
   height: 286px;
   margin-bottom: 32px;
   border-radius: 20px;
-  color: rgb(5, 25, 62);
+  color: #FFF;
 }
 @media (max-width: 1024px) {
   .current-weather-header {
@@ -429,10 +432,10 @@ hr {
   max-width: 180px;
   width: 100%;
   height: 118px;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   padding: 20px;
   border-radius: 12px;
-  border: solid 1px rgb(42, 66, 109);
+  border: solid 1px #413f46;
 }
 @media (max-width: 600px) {
   .weather-metric {
@@ -445,7 +448,7 @@ hr {
   font-size: 18px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(212, 211, 200);
+  color: #727177;
   margin-bottom: 20px;
 }
 
@@ -485,11 +488,11 @@ hr {
   text-align: center;
   width: 100px;
   height: 100%;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   border-radius: 12px;
   padding: 10px 16px;
   gap: 16px;
-  border: solid 1px rgb(42, 66, 109);
+  border: solid 1px #413f46;
 }
 @media (max-width: 1024px) {
   .daily-forecast-item {
@@ -515,7 +518,7 @@ hr {
 .hourly-forecast-panel {
   display: flex;
   flex-direction: column;
-  background-color: rgb(18, 40, 77);
+  background-color: #2a2830;
   width: 100%;
   max-width: 720px;
   min-width: 384px;
@@ -559,7 +562,7 @@ hr {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
   border: none;
   width: 120px;
   border-radius: 8px;
@@ -568,7 +571,7 @@ hr {
   font-size: 16px;
   font-weight: 500;
   line-height: 120%;
-  color: rgb(255, 255, 255);
+  color: #FFF;
 }
 
 .day-button-wrapper {
@@ -583,8 +586,8 @@ hr {
   top: 100%;
   right: 0;
   left: auto;
-  background-color: rgb(18, 40, 77);
-  border: solid 1px rgb(42, 66, 109);
+  background-color: #2a2830;
+  border: solid 1px #413f46;
   border-radius: 12px;
   padding: 8px;
   gap: 4px;
@@ -601,7 +604,7 @@ hr {
 }
 
 .day-grid:hover {
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
 }
 
 .hourly-forecast-item {
@@ -610,9 +613,9 @@ hr {
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
-  background-color: rgb(42, 66, 109);
+  background-color: #413f46;
   padding: 10px 16px 10px 12px;
-  border: solid 1px rgb(42, 66, 109);
+  border: solid 1px #413f46;
 }
 
 .hourly-forecast-details {

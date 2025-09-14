@@ -4,29 +4,30 @@
 // $lilac: rgba(144, 97, 129);
 // $pink: rgba(144, 97, 129);
 // $coral: rgba(144, 97, 129);
-$white: rgba(255, 255, 255);
+
 
 // Dark Mode colors
-$dark-blue: rgba(5, 25, 62, 255);
-$mid-blue: rgb(18, 40, 77);
-$med-blue: rgb(42, 66, 109);
-$light-blue: rgba(53, 105 ,165 ,255);
-$yellow: rgba(255, 200, 135, 255);
-$orange: rgba(53, 105, 165, 255);
-$neutral-200: rgba(212, 211, 200);
+$clr-surface-tonal-a0: #15121b;
+$clr-surface-tonal-a10: #2a2830;
+$clr-surface-tonal-a20: #413f46;
+$clr-surface-tonal-a30: #59575e;
+$clr-surface-tonal-a40: #727177;
+$clr-surface-tonal-a50: #8d8b90;
 
-// Backgrounds
-$color-bg-primary: $mid-blue;
-$color-bg-secondary: $dark-blue;
-$color-bg-accent: $yellow;
+$white: #FFF;
+$clr-primary-a0: #4c408b;
 
-// Text
+// Colors
+
+$color-bg-primary: $clr-surface-tonal-a10;
+$color-bg-secondary: $clr-surface-tonal-a0;
+$color-bg-accent: $clr-primary-a0;
+
 $color-text-primary: $white;
-$color-text-secondary: $neutral-200;
-$color-text-muted: $dark-blue;
+$color-text-secondary: $clr-surface-tonal-a40;
+$color-text-dark: $clr-surface-tonal-a0;
 
-// Borders
-$color-border-light: $med-blue;
+$color-border-light: $clr-surface-tonal-a20;
 
 // Spacing Variables
 $spacing-0: 0;

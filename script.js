@@ -1,43 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const unitsBtn = document.getElementById("unitsBtn");
+  const dropdownMenu = document.getElementById("units-dropdown");
+  const locationSearchInput = document.getElementById("locationSearch");
+  const locationSearchMenu = document.getElementById("searchResults");
+  const searchButton = document.getElementById("searchButton");
+  const dayButton = document.getElementById("dayBtn");
+  const dayMenu = document.getElementById("dayMenu");
 
-
-const url = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m";
-
-async function getWeather() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-    console.log("Current weather:");
-    console.log("Temperature:", data.current.temperature_2m, "°C");
-    console.log("Wind speed:", data.current.wind_speed_10m, "km/h");
-
-    console.log("\nHourly forecast:");
-    console.log("Times:", data.hourly.time.slice(0, 5)); // first 5 times
-    console.log("Temperatures:", data.hourly.temperature_2m.slice(0, 5)); // first 5 temps
-  } catch (error) {
-    console.error("Error fetching weather:", error);
-
-    }
-}
-console.log(getWeather())
-
-let unitsBtn = document.getElementById("unitsBtn");
-let dropdownMenu = document.getElementById("units-dropdown");
-let locationSearchInput = document.getElementById("locationSearch");
-let locationSearchMenu = document.getElementById("searchResults"); // add in html
-
-unitsBtn.addEventListener("click", function() {
-  // dropdownMenu.style.display = "none";
-  if (dropdownMenu.style.display == "flex") {
+  function closeAllMenus() {
     dropdownMenu.style.display = "none";
-  } else {
-    dropdownMenu.style.display = "flex";
+    dayMenu.style.display = "none";
+    locationSearchMenu.style.display = "none";
   }
+
+  function setupMenuToggle(button, menu) {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = menu.style.display === "flex";
+      closeAllMenus();
+      menu.style.display = isOpen ? "none" : "flex";
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+  }
+
+  setupMenuToggle(unitsBtn, dropdownMenu);
+  setupMenuToggle(dayButton, dayMenu);
+
+  locationSearchInput.addEventListener("keydown", () => {
+    locationSearchMenu.style.display = "flex";
+  });
+
+  searchButton.addEventListener("click", () => {
+    locationSearchMenu.style.display = "none";
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!locationSearchMenu.contains(event.target) &&
+        !locationSearchInput.contains(event.target)) {
+      locationSearchMenu.style.display = "none";
+    }
+  });
 });
-
-});
-
-locationSearchInput.addEventListener("keydown", function() {
-
-})

@@ -164,11 +164,13 @@ hr {
     color: $color-text-secondary;
     background-color: transparent;
     border: none;
+    width: 100%;
 }
 
 .location-input:focus {
     outline: none;
     box-shadow: none;
+    background-color: transparent;
 }
 
 .location-input::placeholder {
@@ -186,6 +188,7 @@ hr {
     background-color: $color-bg-primary;
     border-radius: $radius-12;
     padding: $spacing-200;
+    position: relative;
 }
 
 .search-submit-btn {
@@ -206,6 +209,35 @@ hr {
 .search-icon {
     width: 25px;
     height: 20px;
+}
+
+.input-results {
+    display: none;
+    flex-direction: column;
+    background-color: $color-bg-primary;
+    width: 100%;
+    gap: $spacing-050;
+    padding: $spacing-100;
+    border-radius: $radius-8;
+    height: 185px;
+    z-index: 9999;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    box-shadow: 0 8px 16px 0 rgba(2, 1, 44, .32);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: $spacing-125;
+    padding: $spacing-100 $spacing-125;
+    border-radius: $radius-8;
+    width: 100%;
+    max-height: 40px;
+    background-color: $color-border-light;
+    overflow-y: hidden;
 }
 
 .weather-dashboard {
@@ -385,6 +417,7 @@ hr {
     min-width: 384px;
     border-radius: $radius-20;
     padding: $spacing-300;
+    gap: $spacing-200;
 
     @include tablet {
         margin-bottom: $spacing-1000;
@@ -393,6 +426,13 @@ hr {
     @include mobile {
         min-width: 345px;
     }
+ }
+
+  .hourly-forecast-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
  }
 
  .hourly-forecast-content {
@@ -405,6 +445,52 @@ hr {
  .hourly-forecast-title {
     @include text-preset-5;
     margin-bottom: $spacing-200;
+ }
+
+ .day-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color-border-light;
+    border: none;
+    width: 120px;
+    border-radius: $radius-8;
+    padding: $spacing-200 $spacing-100;
+    @include text-preset-7;
+    color: $white;
+ }
+
+ .day-button-wrapper {
+    position: relative;
+    display: block;
+ }
+
+  .day-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    background-color: $color-bg-primary;
+    border: solid 1px $color-border-light;
+    border-radius: $radius-12;
+    padding: $spacing-100;
+    gap: $spacing-050;
+    margin-top: $spacing-100;
+    width: 215px;
+    min-height: 313px;
+    z-index: 9999;
+    box-shadow: 0 8px 16px 0 rgba(2, 1, 44, .32);
+ }
+
+ .day-grid {
+    padding: $spacing-100 $spacing-125;
+    border-radius: $radius-8;
+ }
+
+ .day-grid:hover {
+    background-color: $color-border-light;
  }
 
  .hourly-forecast-item {

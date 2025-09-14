@@ -53,6 +53,12 @@
         <div class="search-input-wrapper">
           <img src="assets/images/icon-search.svg" alt="Search Icon" class="search-icon" aria-hidden="true">
           <input type="search" class="location-input" placeholder="Search for a place..." id="locationSearch" aria-label="Search for a location">
+          <div class="input-results" id="searchResults">
+            <div class="results-grid"></div>
+            <div class="results-grid"></div>
+            <div class="results-grid"></div>
+            <div class="results-grid"></div>
+          </div>
         </div>
         <button class="search-submit-btn" id="searchButton">Search</button>
       </section>
@@ -148,7 +154,21 @@
         </aside>
 
         <section class="hourly-forecast-panel">
-          <h3 class="hourly-forecast-title">Hourly forecast</h3>
+          <div class="hourly-forecast-head">
+            <h3 class="hourly-forecast-title">Hourly forecast</h3>
+            <div class="day-button-wrapper">
+              <button class="day-button" id="dayBtn">Monday <img src="./assets/images/icon-dropdown.svg"></button>
+              <div class="day-menu" id="dayMenu">
+                <div class="day-grid">Monday</div>
+                <div class="day-grid">Tuesday</div>
+                <div class="day-grid">Wednesday</div>
+                <div class="day-grid">Thursday</div>
+                <div class="day-grid">Friday</div>
+                <div class="day-grid">Saturday</div>
+                <div class="day-grid">Sunday</div>
+              </div>
+            </div>
+          </div>
           <div class="hourly-forecast-content">
             <div class="hourly-forecast-item">
               <div class="hourly-forecast-details">
